@@ -5,7 +5,7 @@ let waitingForInviteInput = false;
 
 
 async function callOpenAI(prompt, model = "gpt-4.1-mini") {
-  const res = await fetch("http://localhost:3000/api/openai", {
+  const res = await fetch("https://what-spoppin.onrender.com/api/openai", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ prompt, model })
@@ -396,5 +396,6 @@ $("#newChat").addEventListener("click", startNewChat);
 
 loadSaved(); 
 loadTheme();
+
 
 
